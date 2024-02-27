@@ -23,10 +23,10 @@ _;
 constructor() {
     owner = msg.sender;
 }
-    function setAge(uint256 _age) external onlyOwner {
+    function setAge(uint256 _age) public{
 age = _age;
 }
-    function setHrsWrk(uint256 _hours) external onlyOwner hoursGreaterThanZero(_hours) {
+    function setHrsWrk(uint256 _hours) public  hoursGreaterThanZero(_hours) {
 hoursWorked = _hours;
 }
     function setRate(uint256 _rate) external onlyOwner rateGreaterThanZero(_rate) {
